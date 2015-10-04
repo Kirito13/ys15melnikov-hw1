@@ -3,18 +3,18 @@ package ua.yandex.shad.tempseries;
 public class TempSummaryStatistics {
     private double avgTemp;
     private double devTemp;
-	private double minTemp;
-	private double maxTemp;
+    private double minTemp;
+    private double maxTemp;
 
-	public TempSummaryStatistics(double inputAvgTemp, double inputDevTemp,
-	double inputMinTemp, double inputMaxTemp) {
-		avgTemp = inputAvgTemp;
-		devTemp = inputDevTemp;
-		minTemp = inputMinTemp;
-		maxTemp = inputMaxTemp;
-	}
+    public TempSummaryStatistics(double inputAvgTemp, double inputDevTemp,
+    double inputMinTemp, double inputMaxTemp) {
+        avgTemp = inputAvgTemp;
+        devTemp = inputDevTemp;
+        minTemp = inputMinTemp;
+        maxTemp = inputMaxTemp;
+    }
 
-	public double getAvgTemp() {
+    public double getAvgTemp() {
         return avgTemp;
     }
 

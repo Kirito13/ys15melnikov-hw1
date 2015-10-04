@@ -5,8 +5,8 @@ public class TemperatureSeriesAnalysis {
     
     private double[] temperatureSeries;
     private int arrayLenght;
-    private final double ABSOLUT_ZERO = -273;
-    private final double EPSILON = 0.00001;
+    private static final double ABSOLUT_ZERO = -273;
+    private static final double EPSILON = 0.00001;
 
     public TemperatureSeriesAnalysis() {
         temperatureSeries = new double[0];
@@ -50,7 +50,8 @@ public class TemperatureSeriesAnalysis {
         else {
             double sum = 0;
             for (int i = 0; i < arrayLenght; i++) {
-                sum = sum + Math.pow(temperatureSeries[i] - average(), 2);
+                sum = sum + (temperatureSeries[i] - average()) 
+                * (temperatureSeries[i] - average());
             }
             sum = sum/temperatureSeries.length;
             double deviation = Math.sqrt(sum);
@@ -99,18 +100,19 @@ public class TemperatureSeriesAnalysis {
             throw new IllegalArgumentException();
         }
         else {
-            double сlosestToZero = temperatureSeries[0];
+            double closestToZero = temperatureSeries[0];
             double absClosestToZero = Math.abs(temperatureSeries[0]);
             for (int i = 1; i < arrayLenght; i++) {
                 if (absClosestToZero > Math.abs(temperatureSeries[i])) {
                     absClosestToZero = Math.abs(temperatureSeries[i]);
-                    сlosestToZero = temperatureSeries[i];
+                    closestToZero = temperatureSeries[i];
                 }
                 else {
-                    if (Math.abs(absClosestToZero - Math.abs(temperatureSeries[i])) < EPSILON) {
+                    if (Math.abs(absClosestToZero 
+                    - Math.abs(temperatureSeries[i])) < EPSILON) {
                         if (temperatureSeries[i] >= 0) {
                             absClosestToZero = Math.abs(temperatureSeries[i]);
-                            сlosestToZero = temperatureSeries[i];
+                            closestToZero = temperatureSeries[i];
                         }
                     }
                     else {
@@ -118,7 +120,7 @@ public class TemperatureSeriesAnalysis {
                     }
                 }
             }
-            return сlosestToZero;
+            return closestToZero;
         }
     }
     
@@ -127,7 +129,7 @@ public class TemperatureSeriesAnalysis {
             throw new IllegalArgumentException();
         }
         else {
-            double сlosestToValue = temperatureSeries[0];
+            double closestToValue = temperatureSeries[0];
             double absClosestToValue = 
             Math.abs(tempValue - temperatureSeries[0]);
             for (int i = 1; i < arrayLenght; i++) {
@@ -135,15 +137,15 @@ public class TemperatureSeriesAnalysis {
                 > Math.abs(tempValue - temperatureSeries[i])) {
                     absClosestToValue = 
                     Math.abs(tempValue - temperatureSeries[i]);
-                    сlosestToValue = temperatureSeries[i];
+                    closestToValue = temperatureSeries[i];
                 }
                 else {
-                    if (Math.abs(absClosestToValue - 
-                    Math.abs(tempValue - temperatureSeries[i])) < EPSILON) {
-                        if (temperatureSeries[i] >= 0) {
+                    if (Math.abs(absClosestToValue 
+                    - Math.abs(tempValue - temperatureSeries[i])) < EPSILON) {
+                        if (temperatureSeries[i] >= closestToValue) {
                             absClosestToValue = 
                             Math.abs(tempValue - temperatureSeries[i]);
-                            сlosestToValue = temperatureSeries[i];
+                            closestToValue = temperatureSeries[i];
                         }
                     }
                     else {
@@ -151,7 +153,7 @@ public class TemperatureSeriesAnalysis {
                     }
                 }
             }
-            return сlosestToValue;
+            return closestToValue;
         }
     }
     
