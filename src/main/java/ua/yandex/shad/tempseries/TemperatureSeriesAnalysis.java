@@ -107,7 +107,7 @@ public class TemperatureSeriesAnalysis {
                     сlosestToZero = temperatureSeries[i];
                 }
                 else {
-                    if (abs(absClosestToZero - Math.abs(temperatureSeries[i])) < EPSILON) {
+                    if (Math.abs(absClosestToZero - Math.abs(temperatureSeries[i])) < EPSILON) {
                         if (temperatureSeries[i] >= 0) {
                             absClosestToZero = Math.abs(temperatureSeries[i]);
                             сlosestToZero = temperatureSeries[i];
@@ -138,7 +138,7 @@ public class TemperatureSeriesAnalysis {
                     сlosestToValue = temperatureSeries[i];
                 }
                 else {
-                    if (abs(absClosestToValue - 
+                    if (Math.abs(absClosestToValue - 
                     Math.abs(tempValue - temperatureSeries[i])) < EPSILON) {
                         if (temperatureSeries[i] >= 0) {
                             absClosestToValue = 
@@ -199,7 +199,7 @@ public class TemperatureSeriesAnalysis {
     
     public int addTemps(double ... temps) {
         for (int i = 0; i < temps.length; i++) {
-            if (temps[i] < -ABSOLUT_ZERO) {
+            if (temps[i] < ABSOLUT_ZERO) {
                 throw new InputMismatchException();
             }
         }
