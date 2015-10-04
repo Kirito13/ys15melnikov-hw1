@@ -2,11 +2,11 @@ package ua.yandex.shad.tempseries;
 import java.util.InputMismatchException;
 
 public class TemperatureSeriesAnalysis {
-    
-    private double[] temperatureSeries;
-    private int arrayLenght;
+
     private static final double ABSOLUT_ZERO = -273;
     private static final double EPSILON = 0.00001;
+    private double[] temperatureSeries;
+    private int arrayLenght;
 
     public TemperatureSeriesAnalysis() {
         temperatureSeries = new double[0];
@@ -48,13 +48,13 @@ public class TemperatureSeriesAnalysis {
             throw new IllegalArgumentException();
         }
         else {
-            double sum = 0;
+            double sumValues = 0;
             for (int i = 0; i < arrayLenght; i++) {
-                sum = sum + (temperatureSeries[i] - average()) 
+                sumValues = sumValues + (temperatureSeries[i] - average()) 
                 * (temperatureSeries[i] - average());
             }
-            sum = sum/temperatureSeries.length;
-            double deviation = Math.sqrt(sum);
+            sumValues = sumValues/temperatureSeries.length;
+            double deviation = Math.sqrt(sumValues);
             return deviation;
         }
     }

@@ -98,7 +98,7 @@ public class TemperatureSeriesAnalysisTest {
 
     @Test
     public void testFindTempClosestToZero_WithTheSameValue() {
-        double[] temperatureSeries = {4.3, 0.1, 11.7, -3.92, 0.1, -1.9, 8};
+        double[] temperatureSeries = {4.3, 0.1, -0.1, 11.7, -3.92, 0.1, -1.9, 8};
         TemperatureSeriesAnalysis seriesAnalysis = 
         new TemperatureSeriesAnalysis(temperatureSeries);
         double expResult = 0.1;

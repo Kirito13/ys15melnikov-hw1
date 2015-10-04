@@ -63,11 +63,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testMin_Exception" time="0.008"/>
+  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testMin_Exception" time="0.009"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsLessThen" time="0.002"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testMax" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testMin" time="0"/>
-  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToValue_Exception" time="0"/>
+  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToValue_Exception" time="0.001"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testAverage_Exception" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testAddTemps_EmptyArray" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testAverage" time="0"/>
@@ -75,17 +75,17 @@
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToZero_WithTheSameAbsValue" time="0.001"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToValue_WithSameValueElements" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testAddTemps_ExpendArray" time="0"/>
-  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testSummaryStatistics_Value" time="0.002"/>
+  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testSummaryStatistics_Value" time="0.001"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testDeviation" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testMax_Exception" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testDeviation_Exception" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testAddTemps_WithAbsolutlyZero" time="0.001"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToValue_WithTheSameTwoAbsValue" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsGreaterThen_Exception" time="0"/>
-  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsGreaterThen" time="0"/>
-  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToZeroWithZero_Element" time="0.001"/>
+  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsGreaterThen" time="0.001"/>
+  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToZeroWithZero_Element" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToZero" time="0"/>
-  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsLessThenException" time="0.001"/>
+  <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempsLessThenException" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToValue" time="0"/>
   <testcase classname="ua.yandex.shad.tempseries.TemperatureSeriesAnalysisTest" name="testFindTempClosestToZero_Exception" time="0"/>
 </testsuite>
