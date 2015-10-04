@@ -2,11 +2,11 @@ package ua.yandex.shad.tempseries;
 
 public class TempSummaryStatistics {
     private double avgTemp;
-	private double devTemp;
+    private double devTemp;
 	private double minTemp;
 	private double maxTemp;
 
-	public TempSummaryStatistics (double inputAvgTemp, double inputDevTemp,
+	public TempSummaryStatistics(double inputAvgTemp, double inputDevTemp,
 	double inputMinTemp, double inputMaxTemp) {
 		avgTemp = inputAvgTemp;
 		devTemp = inputDevTemp;

@@ -38,7 +38,7 @@ public class TemperatureSeriesAnalysisTest {
 	public void testDeviationException() {
 		TemperatureSeriesAnalysis seriesAnalysis = 
 		new TemperatureSeriesAnalysis();
-		seriesAnalysis.average();
+		seriesAnalysis.deviation();
 	}
 
 	@Test
